@@ -1,0 +1,101 @@
+{% extends "./base.html" %}
+
+
+{% block content %}
+
+
+            <div class="px-4 md:px-10 mx-auto w-full m-64 pt-32">
+
+                <div class="flex flex-wrap mt-12">
+                    <div class="container mx-auto px-4">
+                        <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
+                            <div class="rounded-t mb-0 px-6 py-2 border-0">
+                <td align="left" class="sm-p-20 sm-dui17-b-t" style="border-radius: 2px; padding: 40px; position: relative; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05); vertical-align: top; z-index: 50;" bgcolor="#ffffff" valign="top">
+                    <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                    <tbody><tr>
+                    <td width="80%">
+                    <h1 class="sm-text-lg all-font-roboto" style="font-weight: 700; line-height: 100%; margin: 0; margin-bottom: 4px; font-size: 24px;">Permit</h1>
+                    <p class="sm-text-xs" style="margin: 0; color: #a0aec0; font-size: 14px;">{{ permit.permit_id }}</p>
+                    </td>
+                    <td style="text-align: right;" width="20%" align="right">
+                    <a href="https://example.com" target="_blank" style="text-decoration: none;">
+                    <img src="https://image0.flaticon.com/icons/png/128/872/872220.png" alt="Download PDF" style="border: 0; line-height: 100%; vertical-align: middle; font-size: 12px;" width="24">
+                    </a>
+                    </td>
+                    </tr>
+                    </tbody></table>
+                    <div style="line-height: 32px;">‌</div>
+                    <table class="sm-leading-32" style="line-height: 28px; font-size: 14px;" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                    <tbody>
+      
+                    <tr>
+                    <td class="sm-inline-block" style="color: #718096;" width="50%">Requester Name</td>
+                    <td class="sm-inline-block" style="font-weight: 600; text-align: right;" width="50%" align="right">{{ permit.requester_name}}</td>
+                    </tr>
+                    <tr>
+                    <td class="sm-inline-block" style="color: #718096;" width="50%">NID</td>
+                    <td class="sm-inline-block" style="font-weight: 600; text-align: right;" width="50%" align="right">{{ permit.requester_nid }}</td>
+                    </tr>
+                    <tr>
+                    <td class="sm-w-1-4 sm-inline-block" style="color: #718096;" width="50%">Contact Number</td>
+                    <td class="sm-w-3-4 sm-inline-block" style="font-weight: 600; text-align: right;" width="50%" align="right">{{ permit.requester_contact_number }}</td>
+                    </tr>
+                    <tr>
+                        <td class="sm-w-1-4 sm-inline-block" style="color: #718096;" width="50%">Address</td>
+                        <td class="sm-w-3-4 sm-inline-block" style="font-weight: 600; text-align: right;" width="50%" align="right">{{ permit.requester_address }}</td>
+                        </tr>
+                        <tr>
+                            <td class="sm-w-1-4 sm-inline-block" style="color: #718096;" width="50%">Work Type</td>
+                            <td class="sm-w-3-4 sm-inline-block" style="font-weight: 600; text-align: right;" width="50%" align="right">{{ permit.request_reason }}</td>
+                            </tr>
+                            <tr>
+                                <td class="sm-w-1-4 sm-inline-block" style="color: #718096;" width="50%">Requested Date</td>
+                                <td class="sm-w-3-4 sm-inline-block" style="font-weight: 600; text-align: right;" width="50%" align="right">{{ permit.requester_date}}</td>
+                                </tr>
+
+                    </tbody></table>
+                    <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                    <tbody><tr>
+                    <td style="padding-top: 24px; padding-bottom: 24px;">
+                    <div style="background-color: #edf2f7; height: 2px; line-height: 2px;">‌</div>
+                    </td>
+                    </tr>
+                    </tbody></table>
+                    <table style="font-size: 14px;" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                    <tbody>
+                    <tr>
+                    <td class="sm-w-full sm-inline-block sm-text-center" width="40%">
+                    <p class="all-font-roboto" style="margin: 0; margin-bottom: 4px; color: #a0aec0; font-size: 10px; text-transform: uppercase; letter-spacing: 1px;">Start Date</p>
+                    <p class="all-font-roboto" style="font-weight: 600; margin: 0; color: #000000;">{{ permit.start_date }}</p>
+                    </td>
+                    <td class="sm-w-full sm-inline-block sm-py-12" style="font-family: Menlo, Consolas, monospace; font-weight: 600; text-align: center; color: #cbd5e0; font-size: 18px; letter-spacing: -1px;" width="20%" align="center">&gt;&gt;&gt;</td>
+                    <td class="sm-w-full sm-inline-block sm-text-center" style="text-align: right;" width="40%" align="right">
+                    <p class="all-font-roboto" style="margin: 0; margin-bottom: 4px; color: #a0aec0; font-size: 10px; text-transform: uppercase; letter-spacing: 1px;">End Date</p>
+                    <p class="all-font-roboto" style="font-weight: 600; margin: 0; color: #000000;">{{ permit.end_date }}</p>
+                    </td>
+                    </tr>
+                    </tbody></table>
+                    <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                    <tbody><tr>
+                    <td style="padding-top: 24px; padding-bottom: 24px;">
+                    <div style="background-color: #edf2f7; height: 2px; line-height: 2px;">‌</div>
+                    </td>
+                    </tr>
+                    </tbody></table>
+                    <table style="line-height: 28px; font-size: 14px;" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                    <tbody><tr>
+                    <td style="color: #718096;" width="50%">Working Area</td>
+                    <td style="font-weight: 600; text-align: right;" width="50%" align="right">{{ permit.requester_location }}</td>
+                    </tr>
+                    <tr>
+                    <td style="color: #718096;" width="50%">Signer</td>
+                    <td style="font-weight: 600; text-align: right;" width="50%" align="right">{{permit.permit_signer }}</td>
+                    </tr>
+
+                    </tbody></table>
+                    </td>
+            </div>
+            </div>
+            </div>
+        </div>
+            {% endblock %}

@@ -1,0 +1,7 @@
+digging type as choice field
+detail view
+base template
+add phone number to table
+green to blue or remove
+details page template
+create page template
