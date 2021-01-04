@@ -156,20 +156,34 @@
             <ul class="md:flex-col md:min-w-full flex flex-col list-none">
               <li class="items-center">
                 <a
-                  class="text-pink-500 hover:text-pink-600 text-xs uppercase py-3 font-bold block"
-                  href="{% url 'dig_permit:index' %}"
-                  ><i class="fas fa-tv opacity-75 mr-2 text-sm"></i>
-                  Permits</a
-                >
-              </li>
-              <li class="items-center">
-                <a
                   class="text-gray-800 hover:text-gray-600 text-xs uppercase py-3 font-bold block"
                   href="{% url 'dig_permit:create' %}"
                   ><i class="fas fa-newspaper text-gray-500 mr-2 text-sm"></i>
                   Create New</a
                 >
               </li>
+              <li class="items-center">
+                <a
+                  class="text-pink-500 hover:text-pink-600 text-xs uppercase py-3 font-bold block"
+                  href="{% url 'dig_permit:index' %}"
+                  ><i class="fas fa-tv opacity-75 mr-2 text-sm"></i>
+                  Approved Permits</a
+                >
+              </li>
+              <a
+              class="text-pink-500 hover:text-pink-600 text-xs uppercase py-3 font-bold block"
+              href="{% url 'dig_permit:pending' %}"
+              ><i class="fas fa-tv opacity-75 mr-2 text-sm"></i>
+              Pending Permits</a
+            >
+          </li>
+          <a
+          class="text-pink-500 hover:text-pink-600 text-xs uppercase py-3 font-bold block"
+          href="{% url 'dig_permit:rejected' %}"
+          ><i class="fas fa-tv opacity-75 mr-2 text-sm"></i>
+          Rejected Permits</a
+        >
+      </li>
               
       </nav>
       <div class="relative md:ml-64 bg-gray-300">

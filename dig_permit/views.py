@@ -17,8 +17,33 @@ class IndexView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context["permit_status"] = "All"
         return context
 
+class PendingView(generic.ListView):
+    template_name = "index.html"
+    context_object_name = "permits"
+    queryset = Permit.objects.filter(approval_status="PENDING").order_by("-creation_date")
+
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["permit_status"] = "Pending"
+        return context
+
+
+
+
+
+class RejectedView(generic.ListView):
+    template_name = "index.html"
+    context_object_name = "permits"
+    queryset = Permit.objects.filter(approval_status="REJECTED").order_by("-creation_date")
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["permit_status"] = "Rejected"
+        return context
 
 
 class  PermitCreate(CreateView):
@@ -29,7 +54,10 @@ class  PermitCreate(CreateView):
     def form_valid(self, form):
         # This method is called when valid form data has been POSTed.
         # It should return an HttpResponse.
-        form.save()
+        instance = form.save()
+        #get year and instance number
+
+
         return super().form_valid(form)
 
 

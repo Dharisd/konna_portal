@@ -17,7 +17,7 @@ class Signers(models.Model):
 
 class Permit(models.Model):
     #can implement the logic for this later
-    permit_id = models.CharField(max_length=200 )
+    permit_id = models.CharField(max_length=200)
 
     requester_name = models.CharField(max_length=200)
     requester_address = models.CharField(max_length=200)
@@ -44,6 +44,21 @@ class Permit(models.Model):
         choices=REQUEST_REASON_TYPES,
         default=CURRENT)
     permit_signer = models.ForeignKey(Signers,on_delete=models.CASCADE)
+
+#80% solution so approval from one user will approve
+    approved = "APPROVED"
+    pending = "PENDING"
+    rejected = "REJECTED"
+    APPROVAL_STATES = [
+        (approved,"APPROVED"),
+        (pending,"PENDING"),
+        (rejected,"REJECTED")
+    ]
+
+    approval_status = models.CharField(
+        max_length=10,
+        choices=APPROVAL_STATES,
+        default=pending)
 
     creation_date = models.DateField(auto_now=True)
 
